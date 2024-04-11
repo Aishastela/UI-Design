@@ -50,6 +50,80 @@
         </div>
       </main>
     </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Book data will be dynamically populated here -->
+        <tr>
+            <td>Book Title</td>
+            <td>Author Name</td>
+            <td>Fiction</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Add Book Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="addBookModalLabel">Add New Book</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<!-- Form for adding a new book will go here -->
+<form>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required>
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" required>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" id="category" required>
+            <option value="">Select Category</option>
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="fantasy">Fantasy</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Book</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function search() {
+var input = document.getElementById('searchInput').value;
+// Perform search functionality here based on the input value
+console.log('Searching for:', input);
+// You can modify this function to perform search operations as needed
+}
+</script>
 
       
         
