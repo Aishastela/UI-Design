@@ -8,105 +8,145 @@
     <link rel="stylesheet" href="C:\Users\Acer\Desktop\test\koy\css\adminpanel.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <h2>Admin Panel</h2>
-                    <ul>
-                        <li><a href="#" class="active">Manage Books</a></li>
-                        <li><a href="#">Manage Orders</a></li>
-                        <li><a href="#">Manage Users</a></li>
-                        <li><a href="#">Manage Categories</a></li>
-                        <li><a href="#">Manage Authors</a></li>
-                        <li><a href="#">Manage Discounts</a></li>
-                        <li><a href="#">Customers Management</a></li>
-                        <li><a href="#">Inventory Management</a></li>
-                        <li><a href="#">Manage Reviews</a></li>
-                        <li><a href="#">Order Processing</a></li>
-                        <li><a href="#">View Sales Reports</a></li>
-                        <li><a href="#">Setting</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="content">
-                    <h2>Book Store</h2>
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button" onclick="search()">Search</button>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Book Id</th> 
-                                <th>Author</th>
-                                <th>Category</th>
-                            
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Book data will be dynamically populated here -->
-                            <!-- <tr>
-                                <td>Book Title</td>
-                                <td>Author Name</td>
-                                <td>Fiction</td>
-                                <td> -->
-                                    <!-- <button class="btn btn-sm btn-primary">Add</button>
-                                    <button class="btn btn-sm btn-danger">Delete</button> -->
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Add Book Modal -->
-    <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addBookModalLabel">Add New Book</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+            <!-- side bar -->
+        <nav class="col-sm-2 sidebar">
+          <div class="position-sticky">
+            <h2>Admin Panel</h2>
+            <ul class="nav flex-column">
+              <li><a href="#" class="active">Manage Books</a></li>
+              <li><a href="#">Manage Orders</a></li>
+              <li><a href="#">Manage Users</a></li>
+              <li><a href="#">Manage Categories</a></li>
+              <li><a href="#">Manage Authors</a></li>
+              <li><a href="#">Manage Discounts</a></li>
+              <li><a href="#">Customers Management</a></li>
+              <li><a href="#">Inventory Management</a></li>
+              <li><a href="#">Manage Reviews</a></li>
+              <li><a href="#">Order Processing</a></li>
+              <li><a href="#">View Sales Reports</a></li>
+              <li><a href="#">Setting</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="col-sm-9">
+          <div class="col-md-9">
+            <div class="content">
+              <h2>Book Store</h2>
+              <div class="mb-3">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="searchInput"
+                    placeholder="Search..."
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      onclick="search()"
+                    >
+                      Search
                     </button>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Book data will be dynamically populated here -->
+                  <tr>
+                    <td>Book Title</td>
+                    <td>Author Name</td>
+                    <td>Fiction</td>
+                    <td>
+                      <button class="btn btn-sm btn-primary">Add</button>
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Add Book Modal -->
+          <div
+            class="modal fade"
+            id="addBookModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="addBookModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addBookModalLabel">
+                    Add New Book
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Form for adding a new book will go here -->
-                    <form>
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control" id="title" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="author">Author</label>
-                            <input type="text" class="form-control" id="author" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="category">Category</label>
-                            <select class="form-control" id="category" required>
-                                <option value="">Select Category</option>
-                                <option value="fiction">Fiction</option>
-                                <option value="non-fiction">Non-Fiction</option>
-                                <option value="fantasy">Fantasy</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add to cart</button>
-                        <button class="btn btn-sm btn-primary">Add</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </form>
+                  <!-- Form for adding a new book will go here -->
+                  <form>
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="author">Author</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="author"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="category">Category</label>
+                      <select class="form-control" id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Add to cart
+                    </button>
+                  </form>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </main>
+      </div>
     </div>
+
 
     <script>
         function search() {
