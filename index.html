@@ -10,10 +10,13 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- side bar -->
+        <nav class="col-sm-2 sidebar">
+          <div class="position-sticky">
             <h2>Admin Panel</h2>
-            <ul>
+            <ul class="nav flex-column">
                 <li><a href="#" class="active">Manage Books</a></li>
                 <li><a href="#">Manage Orders</a></li>
                 <li><a href="#">Manage Users</a></li>
@@ -28,17 +31,28 @@
                 <li><a href="#">Setting</a></li>
             </ul>
         </div>
+        </nav>
+
+        <!-- main content -->
+      <main class="col-sm-9">
         <div class="content">
-            <h2>Search</h2>
-            <div class="row">
-              <div class="search-container col-6">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button id="search">Search</button>
+          <h2>Search</h2>
+          <div class="row">
+            <div class="search-container col-4">
+              <input type="text" id="searchInput" placeholder="Search...">
+              <button id="search">Search</button>
             </div>
-            </div>
+          </div>
             
-            <!-- Content for each feature will go here -->
+          </div>
+          
+          <!-- Content for each feature will go here -->
         </div>
+      </main>
+    </div>
+
+      
+        
     </div>
     <!-- Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
