@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore Admin Panel</title>
-    <link rel="stylesheet" href="C:\Users\Acer\Desktop\test\koy\css\adminpanel.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -22,25 +22,19 @@
                 <li><a href="#">Manage Reviews</a></li>
                 <li><a href="#">Order Processing</a></li>
                 <li><a href="#">View Sales Reports</a></li>
-                 <li><a href="#">Setting</a></li>
+                <li><a href="#">Setting</a></li>
             </ul>
         </div>
         <div class="content">
             <h2>Search</h2>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="search()">Search</button>
+                <button id="search">Search</button>
             </div>
             <!-- Content for each feature will go here -->
         </div>
     </div>
-    <script>
-        function search() {
-            var input = document.getElementById('searchInput').value;
-            // Perform search functionality here based on the input value
-            console.log('Searching for:', input);
-            // You can modify this function to perform search operations as needed
-        }
-    </script>
+    <script src="jquery.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
