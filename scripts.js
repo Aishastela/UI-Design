@@ -5,6 +5,7 @@
 //     // You can modify this function to perform search operations as needed
 // }
 
+// JQuery
 $(document).ready(function() {
     $("#search").click(function() {
         var searchText = $("#searchInput").val();

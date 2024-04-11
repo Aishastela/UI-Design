@@ -12,7 +12,7 @@
     width: 250px;
     height: 100vh;
     background-color: #f4f4f4;
-    padding: 20px;
+    
 }
 
 .sidebar h2 {
@@ -45,11 +45,10 @@
 }
 
 .content {
-    flex: 1;
     padding: 20px;
 }
 
-.book-management button {
+/* .book-management button {
     margin-bottom: 20px;
     padding: 10px 20px;
     background-color: #007bff;
@@ -61,11 +60,8 @@
 
 .book-management button:hover {
     background-color: #0056b3;
-}
+} */
 /* CSS styles for the search bar */
-.search-container {
-    margin-bottom: 20px;
-}
 
 .search-container input[type=text] {
     padding: 10px;
