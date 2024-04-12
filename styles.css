@@ -48,19 +48,6 @@
     padding: 20px;
 }
 
-/* .book-management button {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.book-management button:hover {
-    background-color: #0056b3;
-} */
 /* CSS styles for the search bar */
 
 .search-container input[type=text] {
