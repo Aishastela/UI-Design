@@ -5,10 +5,42 @@ function search() {
     // You can modify this function to perform search operations as needed
 }
 
-// JQuery
-// $(document).ready(function() {
-//     $("#search").click(function() {
-//         var searchText = $("#searchInput").val();
-//         console.log(searchText);
-//     });
-// });
+// click event of the "Add" button
+document.getElementById("addButton").addEventListener("click", function() {
+    // Display the modal
+    $('#addBookModal').modal('show');
+});
+
+// form submission
+document.getElementById("addBookForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Collect form data
+    var title = document.getElementById("title").value;
+    var author = document.getElementById("author").value;
+    var category = document.getElementById("category").value;
+
+    // Add the new book data to the table
+    var newRow = document.getElementById("tableBody").insertRow();
+    newRow.innerHTML = "<td>" + title + "</td><td>" + author + "</td><td>" + category + "</td>" +
+                        "<td>" +
+                        "<button class='btn btn-sm btn-primary edit-btn'>Edit</button>" +
+                        "<button class='btn btn-sm btn-danger delete-btn'>Delete</button>" +
+                        "</td>";
+
+    // Hide the modal
+    $('#addBookModal').modal('hide');
+
+    // Reset the form fields
+    document.getElementById("addBookForm").reset();
+
+    newRow.querySelector(".edit-btn").addEventListener("click", function() {
+        // Handle edit button click
+        console.log("Edit button clicked");
+    });
+
+    newRow.querySelector(".delete-btn").addEventListener("click", function() {
+        // Handle delete button click
+        console.log("Delete button clicked");
+    });
+});

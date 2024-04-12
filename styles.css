@@ -70,3 +70,45 @@
 .search-container button:hover {
     background-color: #0056b3;
 }
+
+.add-row {
+    text-align: right; /* Align the button to the right */
+}
+
+/* Center the table within its container */
+.table-container {
+    text-align: center;
+}
+
+/* Center align text content in table headers */
+/* .table th,
+.table td {
+    text-align: center;
+} */
+
+
+
+
+/* Style for the modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Style for the button */
+.btn-primary {
+    background-color: #007bff; /* Change the background color as desired */
+    border-color: #007bff; /* Change the border color as desired */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Change the hover background color as desired */
+    border-color: #0056b3; /* Change the hover border color as desired */
+}
