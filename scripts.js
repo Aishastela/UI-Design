@@ -24,8 +24,8 @@ document.getElementById("addBookForm").addEventListener("submit", function(event
     var newRow = document.getElementById("tableBody").insertRow();
     newRow.innerHTML = "<td>" + title + "</td><td>" + author + "</td><td>" + category + "</td>" +
                         "<td>" +
-                        "<button class='btn btn-sm btn-primary edit-btn'>Edit</button>" +
-                        "<button class='btn btn-sm btn-danger delete-btn'>Delete</button>" +
+                        "<button class='btn btn-sm btn-primary edit-btn'><i class='fa fa-edit'></i></button> " + 
+                        "<button class='btn btn-sm btn-danger delete-btn'><i class='fa fa-trash'></i></button>" +
                         "</td>";
 
     // Hide the modal

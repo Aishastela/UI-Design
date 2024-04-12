@@ -48,6 +48,27 @@
     padding: 20px;
 }
 
+/* Header  */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    align-items: center;
+    padding: 10px 20px; /* Adjust as needed */
+}
+
+.icons {
+    display: flex;
+    font-size: 20px;
+}
+
+.icon {
+    margin-left: 10px; /* Adjust spacing between icons */
+    cursor: pointer; /* Optional: add pointer cursor on hover */
+}
+
+hr {
+    padding: 10px;
+}
 /* CSS styles for the search bar */
 
 .search-container input[type=text] {
@@ -86,29 +107,11 @@
     text-align: center;
 } */
 
-
-
-
 /* Style for the modal */
 .modal-content {
     border-radius: 10px;
 }
 
-.modal-title {
-    font-weight: bold;
-}
-
 .modal-body {
     padding: 20px;
-}
-
-/* Style for the button */
-.btn-primary {
-    background-color: #007bff; /* Change the background color as desired */
-    border-color: #007bff; /* Change the border color as desired */
-}
-
-.btn-primary:hover {
-    background-color: #0056b3; /* Change the hover background color as desired */
-    border-color: #0056b3; /* Change the hover border color as desired */
 }

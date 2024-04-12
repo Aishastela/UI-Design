@@ -5,8 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bookstore Admin Panel</title>
+  <!-- Bootstrap with Css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- FontAwsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,7 +20,7 @@
         <div class="position-sticky">
           <h2>Admin Panel</h2>
           <ul class="nav flex-column">
-            <li><a href="#" class="active">Manage Books</a></li>
+            <li><a href="#bookTable">Manage Books</a></li>
             <li><a href="#">Manage Orders</a></li>
             <li><a href="#">Manage Users</a></li>
             <li><a href="#">Manage Categories</a></li>
@@ -39,28 +42,31 @@
           <div class="content">
             <!-- header -->
             <div class="header">
-              <h3>Book Store</h3>
-              <hr />
-            </div>
+              <div class="icons">
+                <div class="icon"><i class="fa fa-heart"></i></div>
+                <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+                <div class="icon"><i class="fa fa-user"></i></div>
+              </div>
+            </div><hr>
             <!-- Search bar -->
             <div class="mb-3">
               <div class="input-group col-3">
                 <input type="text" class="form-control" id="searchInput" placeholder="Search..." />
                 <div class="input-group-append">
                   <button class="btn btn-primary" type="button" onclick="search()">
-                    Search
+                    <i class="fa fa-search"></i>
                   </button>
                 </div>
               </div>
               <div class="add-row">
                 <button type="button" class="btn btn-primary" id="addButton">
-                  Add
+                  <i class="fa fa-plus"> Add</i>
                 </button>
               </div>
             </div>
             <!-- Table container -->
             <div class="table-container">
-              <table class="table">
+              <table class="table" id="bookTable">
                 <thead>
                   <tr>
                     <th>Title</th>
@@ -76,8 +82,8 @@
                     <td>John</td>
                     <td>Fiction</td>
                     <td>
-                      <button class="btn btn-sm btn-primary">Edit</button>
-                      <button class="btn btn-sm btn-danger">Delete</button>
+                      <button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>
+                      <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>
                   <tr>
@@ -85,8 +91,8 @@
                     <td>Susan</td>
                     <td>Romance</td>
                     <td>
-                      <button class="btn btn-sm btn-primary">Edit</button>
-                      <button class="btn btn-sm btn-danger">Delete</button>
+                      <button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>
+                      <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>
                   <tr>
@@ -94,8 +100,8 @@
                     <td>Andrew</td>
                     <td>Action</td>
                     <td>
-                      <button class="btn btn-sm btn-primary">Edit</button>
-                      <button class="btn btn-sm btn-danger">Delete</button>
+                      <button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>
+                      <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>
                 </tbody>
