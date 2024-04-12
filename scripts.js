@@ -5,7 +5,7 @@ function search() {
     // You can modify this function to perform search operations as needed
 }
 
-// click event of the "Add" button
+// "Add" button click
 document.getElementById("addButton").addEventListener("click", function() {
     // Display the modal
     $('#addBookModal').modal('show');
@@ -28,6 +28,7 @@ document.getElementById("addBookForm").addEventListener("submit", function(event
                         "<button class='btn btn-sm btn-danger delete-btn'><i class='fa fa-trash'></i></button>" +
                         "</td>";
 
+
     // Hide the modal
     $('#addBookModal').modal('hide');
 
@@ -38,9 +39,23 @@ document.getElementById("addBookForm").addEventListener("submit", function(event
         // Handle edit button click
         console.log("Edit button clicked");
     });
+    // Attach event listener to the delete button in the new row
+    attachDeleteButtonListener(newRow.querySelector('.delete-btn'));
 
-    newRow.querySelector(".delete-btn").addEventListener("click", function() {
-        // Handle delete button click
-        console.log("Delete button clicked");
-    });
 });
+
+// delete button click
+function deleteButtonClick(event) {
+    // Get the parent row of the delete button
+    var row = event.target.closest('tr');
+    // Remove the row from the table
+    row.remove();
+}
+
+// Function to attach event listener to delete button
+function attachDeleteButtonListener(button) {
+    button.addEventListener('click', deleteButtonClick);
+}
+
+// Attach event listeners to delete buttons
+document.querySelectorAll('.delete-btn').forEach(attachDeleteButtonListener);
