@@ -59,3 +59,24 @@ function attachDeleteButtonListener(button) {
 
 // Attach event listeners to delete buttons
 document.querySelectorAll('.delete-btn').forEach(attachDeleteButtonListener);
+
+$(document).ready(function () {
+    // Submit event for adding a new category
+    $('#addCategoryForm').submit(function (e) {
+      e.preventDefault();
+      var categoryName = $('#categoryName').val();
+      // Create a new row in the category table
+      var newRow = '<tr><td>' + categoryName + '</td><td><button class="btn btn-sm btn-danger delete-category"><i class="fa fa-trash"></i></button></td></tr>';
+      $('#categoryTableBody').append(newRow);
+      // Clear the input field after adding the category
+      $('#categoryName').val('');
+      // Close the modal
+      $('#addCategoryModal').modal('hide');
+    });
+  
+    // Delete event for categories
+    $(document).on('click', '.delete-category', function () {
+      $(this).closest('tr').remove();
+    });
+  });
+  
