@@ -34,6 +34,45 @@
             <li><a href="#">Setting</a></li>
           </ul>
         </div>
+        <!-- Add a new link for managing categories in the sidebar -->
+<li><a href="#categoryTable" data-toggle="modal" data-target="#addCategoryModal">Manage Categories</a></li>
+
+<!-- Add a form to add new categories -->
+<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Form for adding a new category will go here -->
+        <form id="addCategoryForm">
+          <div class="form-group">
+            <label for="categoryName">Category Name</label>
+            <input type="text" class="form-control" id="categoryName" required />
+          </div>
+          <button type="submit" class="btn btn-primary" id="addCategoryBtn">
+            Add Category
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table container for displaying categories -->
+<div class="table-container">
+  <table class="table" id="categoryTable">
+    <thead>
+      <tr>
+        <th>Category Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="categoryTableBody">
+      <!-- Category data will be dynamically populated here -->
+    </tbody>
+  </table>
+</div>
+
       </nav>
 
       <!-- main content -->
@@ -149,45 +188,7 @@
       </main>
     </div>
   </div>
-  <!-- Add a new link for managing categories in the sidebar -->
-<li><a href="#categoryTable">Manage Categories</a></li>
-
-<!-- Add a form to add new categories -->
-<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <!-- Form for adding a new category will go here -->
-        <form id="addCategoryForm">
-          <div class="form-group">
-            <label for="categoryName">Category Name</label>
-            <input type="text" class="form-control" id="categoryName" required />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Add Category
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Table container for displaying categories -->
-<div class="table-container">
-  <table class="table" id="categoryTable">
-    <thead>
-      <tr>
-        <th>Category Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody id="categoryTableBody">
-      <!-- Category data will be dynamically populated here -->
-    </tbody>
-  </table>
-</div>
-
+  
 
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
